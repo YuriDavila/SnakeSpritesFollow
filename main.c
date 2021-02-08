@@ -11,7 +11,7 @@
 
 #define MAX_PARTS			12	//era pra ser 12
 
-//***** DEFINE FUN«’ES ESTATICAS *****//
+//***** DEFINE FUN√á√ïES ESTATICAS *****//
 
 static void ConfiguraSnake();
 static void MoveSnakeHead();
@@ -21,7 +21,7 @@ static void MoveSnakeBody();
 
 Sprite* inimSprite[MAX_PARTS];
 
-//***** DEFINE VARI¡VEIS *****//
+//***** DEFINE VARI√ÅVEIS *****//
 
 //BOSS SNAKE CONFIG
 u16 updateFrame = 0;
@@ -71,7 +71,7 @@ int main(u16 hard) {
 	//u16 ind;
 	//u16 numTile;
 
-	// Inicia Processador de Video VDP, e estabelece resoluÁ„o da tela 320x224
+	// Inicia Processador de Video VDP, e estabelece resolu√ß√£o da tela 320x224
 	VDP_init(); //(Best Practice)
 	VDP_setScreenWidth320();
 	//VDP_setScreenHeight224();
@@ -194,7 +194,7 @@ static void MoveSnakeHead() {
 		yOrder = -yOrder;
 	}
 
-	//Posiciona a cabeÁa
+	//Posiciona a cabe√ßa
 	SPR_setPosition(inimSprite[0], fix32ToInt(posX), fix32ToInt(posY));
 }
 
@@ -216,7 +216,7 @@ static void MoveSnakeBody() {
 
 		for (int i = 0; i < maxParts - 1; i++) {
 			_bodyPosIndex = headPositionIndex + i;
-			if (_bodyPosIndex >= maxParts + 1) {
+			if (_bodyPosIndex >= maxParts - 1) {
 				_bodyPosIndex = _bodyPosIndex - (maxParts - 1);
 			}
 			
